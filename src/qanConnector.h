@@ -189,7 +189,9 @@ public:
         //! VisualConnector can be attached only to the Port
         PortOnly,
         //! VisualConnector can be attached only to the Node
-        NodeOnly
+        NodeOnly,
+        //! VisualConnector can't be attached to the Node or Port
+        Attachless
     };
     Q_ENUM(AttachMode)
 

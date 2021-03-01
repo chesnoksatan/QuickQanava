@@ -93,6 +93,8 @@ Qan.Connector {
                 return sourcePort // Visible only if a valid source port is set
             case Qan.Connector.NodeOnly:
                 return sourceNode // Visible only if a valid source node is set
+            case Qan.Connector.Attachless:
+                return false //! The connector is always invisible
             }
         }
         return false
@@ -119,6 +121,10 @@ Qan.Connector {
 
         case Qan.Connector.NodeOnly:
             connectorNodePosition()
+            break
+
+        case Qan.Connector.Attachless:
+            //! We do not do anything
             break
         }
     }
